@@ -73,15 +73,27 @@ summary,
 .btn {
   border-radius: 20px;
   border: 1px solid #3d3d4e;
+  transition: all 0.3s;
 }
 
 .btn-white {
   background-color: #fff;
+  color: #030712;
+}
+
+.btn-white:hover {
+  background-color: #030712;
+  color: #fff;
 }
 
 .btn-black {
   background-color: #030712;
   color: #fff;
+}
+
+.btn-black:hover {
+  background-color: #fff;
+  color: #030712;
 }
 
 .container {
@@ -90,6 +102,8 @@ summary,
   justify-content: center;
   align-items: center;
 }
+
+/* Header */
 
 .header {
   position: fixed;
@@ -100,6 +114,7 @@ summary,
   justify-content: space-between;
   align-items: center;
   padding: 2rem 4.8rem;
+  background-color: #fff;
 }
 
 .header-logo {
@@ -118,13 +133,22 @@ summary,
   font-size: 2.4rem;
 }
 
-.main-nav-link {
+.main-nav-link:link,
+.main-nav-link:visited {
   color: #3d3d4e;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #aeb2ba;
 }
 
 .main-nav-btn {
   padding: 0.8rem 1.2rem;
 }
+
+/* Welcome Section */
 
 #welcome-section {
   display: flex;
@@ -134,7 +158,7 @@ summary,
   justify-content: center;
   align-content: center;
   text-align: center;
-  padding: 0 4.6rem;
+  padding: 0 4.8rem;
 }
 
 .welcome-heading {
@@ -164,6 +188,76 @@ summary,
   letter-spacing: 1.1px;
 }
 
-.social-links a {
+.social-link:link,
+.social-link:visited {
   color: #030712;
+  transition: all 0.3s;
+}
+
+.social-link:hover,
+.social-link:active {
+  color: #aeb2ba;
+}
+
+/* Projects Section */
+
+#projects {
+  padding: 0 4.8rem;
+  margin-bottom: 9.6rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 4rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.project-card {
+  position: relative;
+  transition: all 0.5;
+  width: 100%;
+  height: 100%;
+}
+
+.project-image {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.project-text-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: transparent;
+}
+
+.project-title {
+  font-size: 2.4rem;
+  color: #030712;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.project-card:hover .project-text-overlay {
+  opacity: 1;
+}
+
+.project-card:hover .project-image {
+  filter: blur(2px);
+  opacity: 0.7;
 }

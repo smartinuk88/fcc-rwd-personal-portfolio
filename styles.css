@@ -1,0 +1,169 @@
+/* Spacing System (px) 
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 
+*/
+/* Font Sizes (px) 
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* Color 
+Text: #030712
+Secondary: #aeb2ba
+Background: #fff
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  letter-spacing: -2px;
+  color: #030712;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+menu,
+ol,
+ul {
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+label,
+button,
+select,
+summary,
+[type="radio"],
+[type="submit"],
+[type="checkbox"] {
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 20px;
+  border: 1px solid #3d3d4e;
+}
+
+.btn-white {
+  background-color: #fff;
+}
+
+.btn-black {
+  background-color: #030712;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4.8rem;
+}
+
+.header-logo {
+  font-size: 3.2rem;
+  color: #030712;
+  font-weight: 500;
+}
+
+.header-logo span {
+  color: #aeb2ba;
+}
+
+.main-nav-list {
+  display: flex;
+  gap: 1.6rem;
+  font-size: 2.4rem;
+}
+
+.main-nav-link {
+  color: #3d3d4e;
+}
+
+.main-nav-btn {
+  padding: 0.8rem 1.2rem;
+}
+
+#welcome-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  max-width: 160rem;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 0 4.6rem;
+}
+
+.welcome-heading {
+  font-size: 96px;
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+
+.welcome-heading span {
+  color: #aeb2ba;
+}
+
+.welcome-button {
+  font-size: 2.4rem;
+  padding: 1.4rem 3rem;
+  margin-bottom: 3rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.4rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  letter-spacing: 1.1px;
+}
+
+.social-links a {
+  color: #030712;
+}

@@ -159,6 +159,7 @@ summary,
   align-content: center;
   text-align: center;
   padding: 0 4.8rem;
+  margin: 0 auto;
 }
 
 .welcome-heading {
@@ -208,6 +209,7 @@ summary,
 
 .projects-grid {
   display: grid;
+  grid-auto-rows: 1fr;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 4rem;
   width: 100%;
@@ -224,7 +226,7 @@ summary,
 .project-image {
   display: block;
   object-fit: cover;
-  height: 100%;
+  height: calc(100% - 6.8rem);
   width: 100%;
   border-radius: 20px;
   margin: auto;
@@ -260,4 +262,14 @@ summary,
 .project-card:hover .project-image {
   filter: blur(2px);
   opacity: 0.7;
+}
+
+@media (max-width: 44em) {
+  #welcome-section {
+    padding: 0 3.2rem;
+  }
+
+  .welcome-heading {
+    font-size: 8rem;
+  }
 }
